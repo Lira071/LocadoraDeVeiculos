@@ -2,20 +2,21 @@
 
 
 package entidades;
- import java.time.LocalDate;
-import java.time.temporal.ChronoUnit;
+ import java.math.BigDecimal;
+ import java.time.LocalDateTime;
+ import java.time.temporal.ChronoUnit;
 
 public class Aluguel {
     private int id_aluguel;
     private Cliente cliente;
     private Veiculo veiculo;
-    private LocalDate dataInicio;
-    private LocalDate dataFim;
-    private double valorDiaria;
-    private double valorTotal;
+    private LocalDateTime dataInicio;
+    private LocalDateTime dataFim;
+    private BigDecimal valorDiaria;
+    private BigDecimal valorTotal;
     private String status;
-    
-    public Aluguel(int id_aluguel,Cliente cliente,Veiculo veiculo,LocalDate dataInicio,LocalDate dataFim,double valorDiaria,double valorTotal,String status ){
+
+    public Aluguel(int id_aluguel,Cliente cliente,Veiculo veiculo,LocalDateTime dataInicio,LocalDateTime dataFim,BigDecimal valorDiaria,BigDecimal valorTotal,String status ){
         this.id_aluguel= id_aluguel;
         this.cliente = cliente;
         this.veiculo = veiculo;
@@ -24,12 +25,17 @@ public class Aluguel {
         this.valorDiaria = valorDiaria;
         this.valorTotal = calcularTotal();
         this.status = status;
-                 
+
     }
-    private double calcularTotal (){
-        long dias = ChronoUnit.DAYS.between(dataInicio, dataFim);
-        return dias * valorDiaria;
-        
+    private BigDecimal calcularTotal (){
+        long dias = dataInicio.until(dataFim, ChronoUnit.DAYS);
+
+        if (dataFim.getHour() > 12) {
+            dias = dias + 1;
+        }
+
+        return BigDecimal.valueOf(dias * valorDiaria.doubleValue());
+
     }
 
     public int getId_aluguel() {
@@ -56,35 +62,35 @@ public class Aluguel {
         this.veiculo = veiculo;
     }
 
-    public LocalDate getDataInicio() {
+    public LocalDateTime getDataInicio() {
         return dataInicio;
     }
 
-    public void setDataInicio(LocalDate dataInicio) {
+    public void setDataInicio(LocalDateTime dataInicio) {
         this.dataInicio = dataInicio;
     }
 
-    public LocalDate getDataFim() {
+    public LocalDateTime getDataFim() {
         return dataFim;
     }
 
-    public void setDataFim(LocalDate dataFim) {
+    public void setDataFim(LocalDateTime dataFim) {
         this.dataFim = dataFim;
     }
 
-    public double getValorDiaria() {
+    public BigDecimal getValorDiaria() {
         return valorDiaria;
     }
 
-    public void setValorDiaria(double valorDiaria) {
+    public void setValorDiaria(BigDecimal valorDiaria) {
         this.valorDiaria = valorDiaria;
     }
 
-    public double getValorTotal() {
+    public BigDecimal getValorTotal() {
         return valorTotal;
     }
 
-    public void setValorTotal(double valorTotal) {
+    public void setValorTotal(BigDecimal valorTotal) {
         this.valorTotal = valorTotal;
     }
 
@@ -95,5 +101,5 @@ public class Aluguel {
     public void setStatus(String status) {
         this.status = status;
     }
-     
+
 }

@@ -1,9 +1,15 @@
 # Compiled class file
 *.class
 
+# IntelliJ IDEA
+.idea/
+*.iml
+# VSCode
+.vscode/
 # Log file
 *.log
-
+/target/
+/logs/
 # BlueJ files
 *.ctxt
 
