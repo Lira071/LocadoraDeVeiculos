@@ -3,43 +3,43 @@ package entidades;
 
 public class Carro extends Veiculo {
 
-     private int portas;
-     private boolean arcond;
+     private int qtdPortas;
+     private boolean arcondi;
      private boolean automatico;
-     private double motor;
+     private double potMotor;
      
-    public Carro(int id_veiculo, String modelo, String placa, int ano, String cor, String combustivel, int portas, boolean arcond, boolean automatico, double motor) {
+    public Carro(int id_veiculo, String modelo, String placa, int ano, String cor, String combustivel, int qtdPortas, boolean arcondi, boolean automatico, double potMotor) {
         super(id_veiculo, modelo, placa, ano, cor, combustivel);
-         this.portas = portas;
-         this.arcond = arcond;
+         this.qtdPortas = qtdPortas;
+         this.arcondi = arcondi;
          this.automatico = automatico;
-         this.motor = motor;
+         this.potMotor = potMotor;
     }
     
-    public int getPortas() {
-        return portas;
+    public int getQtdPortas() {
+        return qtdPortas;
     }
 
-    public void setPortas(int portas) {
-        this.portas = portas;
+    public void setQtdPortas(int qtdPortas) {
+        this.qtdPortas = qtdPortas;
     }
   
-    public boolean isArcond() {
-        return arcond;
+    public boolean isArcondi() {
+        return arcondi;
     }
 
-    public void setArcond(boolean arcond) {
-        this.arcond = arcond;
+    public void setArcondi(boolean arcondi) {
+        this.arcondi = arcondi;
     }
 
     public boolean isAutomatico() {
         return automatico;
     }
     
-    public double getMotor() {
-        return motor;
+    public double getPotMotor() {
+        return potMotor;
     }
-    public void setMotor(double motor) {
-        this.motor = motor;
+    public void setPotMotor(double potMotor) {
+        this.potMotor = potMotor;
     }
 }

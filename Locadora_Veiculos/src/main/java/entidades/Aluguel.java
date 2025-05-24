@@ -31,7 +31,7 @@ public class Aluguel {
         long dias = dataInicio.until(dataFim, ChronoUnit.DAYS);
 
         if (dataFim.getHour() > 12) {
-            dias = dias + 1;
+            dias = dias + 2;
         }
 
         return BigDecimal.valueOf(dias * valorDiaria.doubleValue());
@@ -42,8 +42,8 @@ public class Aluguel {
         return id_aluguel;
     }
 
-    public void setId_aluguel(int id_aluguel) {
-        this.id_aluguel = id_aluguel;
+    public void setId_aluguel(int id_aluguel2) {
+        this.id_aluguel = id_aluguel2;
     }
 
     public Cliente getCliente() {

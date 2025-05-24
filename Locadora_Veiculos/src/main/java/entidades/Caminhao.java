@@ -7,11 +7,11 @@ public class Caminhao extends Veiculo {
     private double largura;
     private double comprimento;
     private double altura;
-    private double capacidadeCabine;
+    private double capacidadeCaminhao;
     private double motor;
     private int potencia;
     
-    public Caminhao(int id_veiculo, String modelo, String placa, int ano, String cor, String combustivel, double capacidadeCarga, String carroceria, double largura, double comprimento, double altura, double capacidadeCabine, double motor, int potencia) {
+    public Caminhao(int id_veiculo, String modelo, String placa, int ano, String cor, String combustivel, double capacidadeCarga, String carroceria, double largura, double comprimento, double altura, double capacidadeCaminhao, double motor, int potencia) {
         super(id_veiculo, modelo, placa, ano, cor,combustivel);
     }
 
@@ -56,12 +56,12 @@ public class Caminhao extends Veiculo {
         this.altura = altura;
     }
 
-    public double getCapacidadeCabine() {
-        return capacidadeCabine;
+    public double getCapacidadeCaminhao() {
+        return capacidadeCaminhao;
     }
 
-    public void setCapacidadeCabine(double capacidadeCabine) {
-        this.capacidadeCabine = capacidadeCabine;
+    public void setCapacidadeCaminhao(double capacidadeCaminhao) {
+        this.capacidadeCaminhao = capacidadeCaminhao;
     }
 
     public double getMotor() {

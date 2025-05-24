@@ -13,7 +13,7 @@ public class ControleCliente {
     public List<Cliente> imprimir(){
         return clientes;
     }
-    public Cliente consultar (int id_cliente){
+    public Cliente consultarCliente(int id_cliente){
         for ( int i=0; i<clientes.size(); i++){
             Cliente c = clientes.get(i);
             if(c.getId_cliente()== id_cliente){
