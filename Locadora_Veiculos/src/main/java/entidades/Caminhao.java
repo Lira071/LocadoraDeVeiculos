@@ -11,8 +11,8 @@ public class Caminhao extends Veiculo {
     private double motor;
     private int potencia;
     
-    public Caminhao(int id_veiculo, String modelo, String placa, int ano, String cor, String combustivel, double capacidadeCarga, String carroceria, double largura, double comprimento, double altura, double capacidadeCabine, double motor, int potencia) {
-        super(id_veiculo, modelo, placa, ano, cor,combustivel);
+    public Caminhao(int id_veiculo, String modelo, String placa, int ano, String cor, String combustivel,double valorDiaria, double capacidadeCarga, String carroceria, double largura, double comprimento, double altura, double capacidadeCabine, double motor, int potencia) {
+        super(id_veiculo, modelo, placa, ano, cor,combustivel, valorDiaria);
     }
 
     public double getCapacidadeCarga() {

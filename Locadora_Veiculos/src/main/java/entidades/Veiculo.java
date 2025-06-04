@@ -8,14 +8,16 @@ public class Veiculo {
     private int ano;
     private String cor;
     private String combustivel;
+    private double valorDiaria;
      
-    public Veiculo (int id_veiculo, String modelo, String placa, int ano, String cor, String combustivel) {
+    public Veiculo (int id_veiculo, String modelo, String placa, int ano, String cor, String combustivel, double valorDiaria) {
         this.id_veiculo = id_veiculo;
         this.modelo = modelo;
         this.placa = placa;
         this.ano = ano;
         this.cor = cor;
         this.combustivel = combustivel;
+        this.valorDiaria = valorDiaria;
  }
     public int getId_veiculo() {
         return id_veiculo;
@@ -53,6 +55,13 @@ public class Veiculo {
     public void setCombustivel(String combustivel) {
         this.combustivel = combustivel;
     }
-            
+
+    public double getValorDiaria() {
+        return valorDiaria;
+    }
+
+    public void setValorDiaria(double valorDiaria) {
+        this.valorDiaria = valorDiaria;       
   }
+ }
 

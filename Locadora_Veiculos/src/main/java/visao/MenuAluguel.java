@@ -1,13 +1,18 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package visao;
 
-/**
- *
- * @author Micro
- */
+package visao;
+import controle.ControleAluguel;
+import controle.ControleCliente;
+import controle.ControleVeiculo;
+import entidades.Aluguel;
+import entidades.Cliente;
+import entidades.Veiculo;
+
+import java.util.Scanner;
+
+
 public class MenuAluguel {
+    Scanner entrada = new Scanner (System.in);
+    
+    
     
 }

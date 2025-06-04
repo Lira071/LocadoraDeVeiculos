@@ -8,8 +8,8 @@ public class Carro extends Veiculo {
      private boolean automatico;
      private double motor;
      
-    public Carro(int id_veiculo, String modelo, String placa, int ano, String cor, String combustivel, int portas, boolean arcond, boolean automatico, double motor) {
-        super(id_veiculo, modelo, placa, ano, cor, combustivel);
+    public Carro(int id_veiculo, String modelo, String placa, int ano, String cor, String combustivel, double valorDiaria, int portas, boolean arcond, boolean automatico, double motor) {
+        super(id_veiculo, modelo, placa, ano, cor, combustivel, valorDiaria);
          this.portas = portas;
          this.arcond = arcond;
          this.automatico = automatico;
